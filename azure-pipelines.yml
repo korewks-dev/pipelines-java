@@ -6,8 +6,13 @@
 trigger:
 - main
 
+# pool:
+#  vmImage: ubuntu-latest
+
 pool:
-  vmImage: ubuntu-latest
+  name: Default
+  demands:
+   - agent.name -equals BOB
 
 steps:
 - task: Maven@3
